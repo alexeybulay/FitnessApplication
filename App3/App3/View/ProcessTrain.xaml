@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.View.ProcessTrain" BackgroundColor="White" Title="{Binding NameTitle}">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding NameTitle}" TextColor="Silver" FontSize="20" FontAttributes="None" HorizontalOptions="Center"/>
+            <!--<Frame BorderColor="Silver" VerticalOptions="CenterAndExpand">-->
+            <Image Source="{Binding ImagePath}" IsAnimationPlaying="True" WidthRequest="250" HeightRequest="250" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <!--</Frame>-->
+            <Label Text="{Binding NameExercise}" TextColor="Black" FontSize="25" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="x 20" TextColor="Teal" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Grid VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="back.png"  Command="{Binding NextExercise}" Grid.Column="0" BackgroundColor="Transparent" HeightRequest="60"/>
+                <ImageButton Source="check.png"  Command="{Binding NextExercise}" Grid.Column="1" BackgroundColor="Transparent" />
+                <ImageButton Source="next.png" Command="{Binding NextExercise}" Grid.Column="2" BackgroundColor="Transparent"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
